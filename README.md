@@ -105,6 +105,7 @@ https://browserleaks.com/ip
 ```
 # Config YT Downloader  
 ```shell
+sudo apt install unzip
 # mkdir -p ~/.local/bin && echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O ~/.local/bin/yt-dlp
 wget https://github.com/denoland/deno/releases/latest/download/deno-x86_64-unknown-linux-gnu.zip -qO- | funzip >~/.local/bin/deno
