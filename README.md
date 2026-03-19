@@ -34,3 +34,13 @@ journalctl -xe
 curl ifconfig.me; echo
 https://browserleaks.com/ip
 ```
+# YT Downloader einrichten
+```shell
+# mkdir -p ~/.local/bin && echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O ~/.local/bin/yt-dlp
+wget https://github.com/denoland/deno/releases/latest/download/deno-x86_64-unknown-linux-gnu.zip -qO- | funzip >~/.local/bin/deno
+chmod a+rx ~/.local/bin/yt-dlp ~/.local/bin/deno
+yt-dlp --update-to nightly
+```
+
+
