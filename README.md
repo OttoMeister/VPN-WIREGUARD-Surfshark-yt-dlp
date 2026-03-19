@@ -1,13 +1,14 @@
-# Surfshark mit WIREGUARD
+# Surfshark with WIREGUARD
 ## https://www.surfshark.com
 ```shell
 sudo apt install wireguard wireguard-tools
 ```
-## Download conf file from website to /etc/wiregard and disable DNS
+## Download conf file from website to /etc/wiregard
 ## https://my.surfshark.com/vpn/manual-setup/main/wireguard
 
 ![Alternativer Text](https://github.com/OttoMeister/VPN-WIREGUARD-Surfshark-yt-dlp/blob/62822c09982620b92e2aeb328bba3f3d2f9a1f62/DownloadConfig.png)
 
+## Change all DNS in config files
 ```shell
 sudo sed -i 's/^DNS/#DNS/' /etc/wireguard/*.conf # ohne DNS
 sudo sed -i 's/^DNS = .*/DNS = 1.1.1.1, 8.8.8.8/' /etc/wireguard/*.conf # mit generik DNS
