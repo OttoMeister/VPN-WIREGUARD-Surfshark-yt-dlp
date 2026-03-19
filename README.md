@@ -80,9 +80,11 @@ sed -i 's/^#\?DNS = .*/DNS = 1.1.1.1, 8.8.8.8/' ~/Downloads/*.conf
 ```shell
 sed -i 's|<insert_your_private_key_here>|FRWEs5PqrLnu-edtGDregtDLscEHTBcfD0H3C53253pXxc=|' ~/Downloads/*.conf
 ```
-## Move to etc
+## Move to etc and make root
 ```shell
 sudo mv ~/Downloads/*.conf /etc/wireguard/
+sudo chown root:root /etc/wireguard/*.conf
+
 ```
 ## Show all configs
 ```shell
