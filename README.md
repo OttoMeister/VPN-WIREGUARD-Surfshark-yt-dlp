@@ -76,7 +76,7 @@ https://my.surfshark.com/vpn/manual-setup/main/wireguard
 ```shell
 sed -i 's/^#\?DNS = .*/DNS = 1.1.1.1, 8.8.8.8/' ~/Downloads/*.conf
 ```
-## Add private Key to the config
+## Add private Key to the config (key is fake and only a example)
 ```shell
 sed -i 's|<insert_your_private_key_here>|FRWEs5PqrLnu-edtGDregtDLscEHTBcfD0H3C53253pXxc=|' ~/Downloads/*.conf
 ```
