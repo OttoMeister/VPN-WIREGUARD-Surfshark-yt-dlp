@@ -60,15 +60,15 @@ ip netns exec "$NS" sudo -u "$REAL_USER" "$PATH_YTDLP" "${YTDLP_DEFAULTS[@]}" "$
 ```
 Place it in ~/local/bin/vpn-yt-dlp and change execution:
 ```shell
-chmod +x ~/local/bin/vpn-yt-dlp
+chmod +x ~/.local/bin/vpn-yt-dlp
 ```
 # Config Surfshark with WIREGUARD
 ## https://www.surfshark.com
 ```shell
 sudo apt install wireguard wireguard-tools
 ```
-### Download conf file from website to /etc/wiregard
-##@ https://my.surfshark.com/vpn/manual-setup/main/wireguard
+### Download conf file from website to /etc/wireguard
+https://my.surfshark.com/vpn/manual-setup/main/wireguard
 
 ![Alternativer Text](https://github.com/OttoMeister/VPN-WIREGUARD-Surfshark-yt-dlp/blob/62822c09982620b92e2aeb328bba3f3d2f9a1f62/DownloadConfig.png)
 
@@ -97,7 +97,7 @@ sudo wg
 sudo ip a show ch-zur
 sudo wg-quick down ch-zur
 ```
-## debugg
+## debug
 ```shell
 journalctl -xe
 curl ifconfig.me; echo
