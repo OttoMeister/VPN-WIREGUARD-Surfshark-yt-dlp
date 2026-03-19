@@ -10,12 +10,15 @@ sudo apt install wireguard wireguard-tools
 
 ## Change all DNS in config files
 ```shell
-sudo sed -i 's/^DNS/#DNS/' /etc/wireguard/*.conf # ohne DNS
-sudo sed -i 's/^DNS = .*/DNS = 1.1.1.1, 8.8.8.8/' /etc/wireguard/*.conf # mit generik DNS
+sed -i 's/^#\?DNS = .*/DNS = 1.1.1.1, 8.8.8.8/' ~/Downloads/*.conf
 ```
 ## Add private Key to the config
 ```shell
-sudo sed -i 's|<insert_your_private_key_here>|##################|' /etc/wireguard/*.conf
+sed -i 's|<insert_your_private_key_here>|FRWEs5PqrLnu-edtGDregtDLscEHTBcfD0H3C53253pXxc=|' ~/Downloads/*.conf
+```
+## Move to etc
+```shell
+sudo cp ~/Downloads/*.conf /etc/wireguard/
 ```
 ## Show all configs
 ```shell
