@@ -1,4 +1,4 @@
-# Download YouTube con VPN and yt-dlp:
+# Download YouTube with VPN and yt-dlp:
 
 ## Routes yt-dlp downloads through an isolated WireGuard network namespace keeping the rest of the system's traffic unaffected.
 Usage:  
@@ -58,7 +58,7 @@ echo -n "[vpn-yt-dlp] External IP: "
 ip netns exec "$NS" curl -s --max-time 5 https://api.ipify.org || echo "unknown"; echo
 ip netns exec "$NS" sudo -u "$REAL_USER" "$PATH_YTDLP" "${YTDLP_DEFAULTS[@]}" "$@" "$URL"
 ```
-Place it in ~/local/bin/vpn-yt-dlp and change execution:
+Place it in ~/.local/bin/vpn-yt-dlp and change execution:
 ```shell
 chmod +x ~/.local/bin/vpn-yt-dlp
 ```
@@ -76,9 +76,9 @@ https://my.surfshark.com/vpn/manual-setup/main/wireguard
 ```shell
 sed -i 's/^#\?DNS = .*/DNS = 1.1.1.1, 8.8.8.8/' ~/Downloads/*.conf
 ```
-## Add private Key to the config (key is fake and only a example)
+## Add private Key to the config as YOUR_PRIVATE_KEY_HERE
 ```shell
-sed -i 's|<insert_your_private_key_here>|FRWEs5PqrLnu-edtGDregtDLscEHTBcfD0H3C53253pXxc=|' ~/Downloads/*.conf
+sed -i 's|<insert_your_private_key_here>|YOUR_PRIVATE_KEY_HERE|' ~/Downloads/*.conf
 ```
 ## Move to etc and make root and chmod
 ```shell
