@@ -62,13 +62,13 @@ Place it in ~/local/bin/vpn-yt-dlp and change execution:
 ```shell
 chmod +x ~/local/bin/vpn-yt-dlp
 ```
-# Surfshark with WIREGUARD
+# Config Surfshark with WIREGUARD
 ## https://www.surfshark.com
 ```shell
 sudo apt install wireguard wireguard-tools
 ```
-## Download conf file from website to /etc/wiregard
-## https://my.surfshark.com/vpn/manual-setup/main/wireguard
+### Download conf file from website to /etc/wiregard
+##@ https://my.surfshark.com/vpn/manual-setup/main/wireguard
 
 ![Alternativer Text](https://github.com/OttoMeister/VPN-WIREGUARD-Surfshark-yt-dlp/blob/62822c09982620b92e2aeb328bba3f3d2f9a1f62/DownloadConfig.png)
 
@@ -101,7 +101,7 @@ journalctl -xe
 curl ifconfig.me; echo
 https://browserleaks.com/ip
 ```
-# YT Downloader einrichten
+# Config YT Downloader  
 ```shell
 # mkdir -p ~/.local/bin && echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O ~/.local/bin/yt-dlp
