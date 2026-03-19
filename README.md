@@ -58,7 +58,10 @@ echo -n "[vpn-yt-dlp] External IP: "
 ip netns exec "$NS" curl -s --max-time 5 https://api.ipify.org || echo "unknown"; echo
 ip netns exec "$NS" sudo -u "$REAL_USER" "$PATH_YTDLP" "${YTDLP_DEFAULTS[@]}" "$@" "$URL"
 ```
-
+Place it in ~/local/bin/vpn-yt-dlp and change execution:
+```shell
+chmod +x ~/local/bin/vpn-yt-dlp
+```
 # Surfshark with WIREGUARD
 ## https://www.surfshark.com
 ```shell
