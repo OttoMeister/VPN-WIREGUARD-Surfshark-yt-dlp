@@ -1,9 +1,10 @@
 # Surfshark mit WIREGUARD
-## https://my.surfshark.com/vpn/manual-setup/main/wireguard
+## https://www.surfshark.com
 ```shell
 sudo apt install wireguard wireguard-tools
 ```
 ## Download conf file from website to /etc/wiregard and disable DNS
+## https://my.surfshark.com/vpn/manual-setup/main/wireguard
 ```shell
 sudo sed -i 's/^DNS/#DNS/' /etc/wireguard/*.conf # ohne DNS
 sudo sed -i 's/^DNS = .*/DNS = 1.1.1.1, 8.8.8.8/' /etc/wireguard/*.conf # mit generik DNS
@@ -12,12 +13,11 @@ sudo sed -i 's/^DNS = .*/DNS = 1.1.1.1, 8.8.8.8/' /etc/wireguard/*.conf # mit ge
 ```shell
 sudo sed -i 's|<insert_your_private_key_here>|##################|' /etc/wireguard/*.conf
 ```
-## show all configs
+## Show all configs
 ```shell
 ls /etc/wireguard/*.conf | xargs -n 1 basename -s .conf | tr '\n' ' '; echo
-ar-bua at-vie ch-zur co-bog de-ber de-fra ec-uio es-mad fr-par ie-dub it-mil jp-tok kr-seo mx-qro pa-pac pe-lim pt-lis py-asu se-sto tr-ist tw-tai us-bos us-chi us-dal us-mia us-nyc us-slc ve-car
 ```
-## start - status - stop
+## Start - status - stop
 ```shell
 sudo wg-quick up ch-zur
 sudo wg
@@ -28,6 +28,5 @@ sudo wg-quick down ch-zur
 ```shell
 journalctl -xe
 curl ifconfig.me; echo
-ip a | sed -n '/scope global/ { /-/ s/.* //p }'
 https://browserleaks.com/ip
 ```
