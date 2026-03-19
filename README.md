@@ -18,11 +18,11 @@ sed -i 's|<insert_your_private_key_here>|FRWEs5PqrLnu-edtGDregtDLscEHTBcfD0H3C53
 ```
 ## Move to etc
 ```shell
-sudo cp ~/Downloads/*.conf /etc/wireguard/
+sudo mv ~/Downloads/*.conf /etc/wireguard/
 ```
 ## Show all configs
 ```shell
-ls /etc/wireguard/*.conf | xargs -n 1 basename -s .conf | tr '\n' ' '; echo
+sudo sh -c "ls /etc/wireguard/*.conf | xargs -n 1 basename -s .conf | tr '\n' ' '" ; echo
 ```
 ## Start - status - stop
 ```shell
