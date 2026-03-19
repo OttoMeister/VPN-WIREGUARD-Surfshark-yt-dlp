@@ -1,10 +1,10 @@
 # Download YouTube con VPN and yt-dlp:
 
-## Routes yt-dlp downloads through an isolated WireGuard network namespace keeping the rest of the system's traffic unaffected.ç
+## Routes yt-dlp downloads through an isolated WireGuard network namespace keeping the rest of the system's traffic unaffected.
 Usage:  
-vpn-yt-dlp rand https://www.youtube.com/watch?v=1nnatyEvxQU  
+vpn-yt-dlp rand https://www.youtube.com/watch?v=1nnatyEvxQU (rand is random VPN conection)  
 vpn-yt-dlp us-slc https://www.youtube.com/watch?v=1nnatyEvxQU  
-vpn-yt-dlp rand 1nnatyEvxQU  
+vpn-yt-dlp rand 1nnatyEvxQU  (rand is random VPN conection)  
 vpn-yt-dlp us-nyc 1nnatyEvxQU  
 ```shell
 #!/usr/bin/env bash
